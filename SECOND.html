@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnEasy Platform</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+       <span class="menu-icon" onclick="toggleSidebar()">&#9776;</span>
+
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for courses...">
+      <button>Search</button>
+    </div>
+
+    <div class="header-right">
+      <nav>
+        <a href="SECOND.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <h3>Categories</h3>
+       <a href="#"><i>💻</i> Web Development</a>
+       <a href="#"><i>⚡</i> JavaScript</a>
+       <a href="#"><i>🎨</i> Graphic Design</a>
+       <a href="#"><i>🔢</i> Mathematics</a>
+       <a href="#"><i>🎮</i> Game Development</a>
+    </div>
+    <div class="sidebar-section">
+      <h3>Exercises</h3>
+       <a href="exericse1.html"><i>📝</i> History S1 Exercises</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Welcome to</h2>
+        <h1>Course Management System</h1>
+        <p>Your all-in-one place to learn, practice and achieve your goals. Explore courses, take quizzes and grow your skills.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn-primary">Explore Courses</a>
+          <a href="quize.html" class="btn-secondary">Take Quiz</a>
+        </div>
+      </div>
+     
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <a href="#" class="view-all">View All</a>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-image web-design">
+            <img src="web.jpg" alt="Web Design" />
+          </div>
+          <h3>Web Design</h3>
+          <p>We create beautiful and responsive websites.</p>
+          <a href="https://www.w3schools.com">Read More </a>
+        </div>
+        <div class="card">
+          <div class="card-image graphic-design">
+            <img src="adobe.jpg" alt="Graphic Design" />
+          </div>
+          <h3>Graphic Design</h3>
+          <p>We bring your ideas to life with creativity.</p>
+          <a href="#">Read More </a>
+        </div>
+        <div class="card">
+          <div class="card-image programming">
+            <img src="java.jpg" alt="Programming" />
+          </div>
+          <h3>Programming</h3>
+          <p>Learn programming and build powerful applications.</p>
+          <a href="https://www.w3schools.com">Read More </a>
+        </div>
+        <div class="card">
+          <div class="card-image mathematics">
+            <img src="math.jpg" alt="Math" />
+          </div>
+          <h3>Mathematics</h3>
+          <p>Solving equations and more mathematics problems.</p>
+          <a href="https://www.w3schools.com">Read More </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Section -->
+    <section class="bottom-section">
+      <!-- Newsletter -->
+      <div class="newsletter-box">
+         <div class="box-header">
+           <i>✉</i>
+           <h3>Subscribe to Our New update</h3>
+         </div>
+        <p>Get the latest updates and learning materials directly to your inbox.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="testimonials-box">
+         <div class="box-header">
+           <i>"</i>
+           <h2>What Our Students Say</h2>
+         </div>
+        <div class="new update">
+          
+          <div class="all apdates">
+            <p>"This website helped me understand mathematics better!"</p>
+            <span class="name">— Alice, Student</span>
+            
+        </div>
+          <div class="testimonial">
+            <div class="testimonial-avatar"><i>👤</i></div>
+            <div class="testimonial-content">
+              <p>"The quizzes are a great way to test my knowledge."</p>
+              <span class="name">— Bob, Student</span>
+              
+            </div>
+        </div>
+        <div class="testimonial">
+           <div class="testimonial-avatar"><i>👤</i></div>
+          <div class="testimonial-content">
+            <p>"The notes and quizzes make learning fun and interactive."</p>
+            <span class="name">— Teacher</span>
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Quiz Link -->
+      <div class="quiz-box">
+         <div class="box-header">
+           <i>❓</i>
+           <h3>Take a Quiz</h3>
+         </div>
+        <p>Test your knowledge with our interactive quizzes.</p>
+         <a href="quize.html" class="view-more-quizzes">Start Quiz <i>→</i></a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      
+      <p>&copy; 2026 LearnEasy. Made by Gnetwork.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </footer>
+        
+    
+    
+  
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const mainContent = document.querySelector('.main-content');
+      sidebar.classList.toggle('active');
+      mainContent.classList.toggle('shifted');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - LearnEasy</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .services-page {
+            padding: 40px 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .services-page h1 {
+            color: #1a237e;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .service-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .service-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            background: #f8f9ff;
+        }
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: #e3f2fd;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2962ff;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+        .service-item h3 {
+            color: #1a237e;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+        .service-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #2962ff;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .services-page {
+                padding: 20px;
+            }
+            .service-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <span class="menu-icon" onclick="toggleSidebar()">&#9776;</span>
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="SECOND.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-icons">
+                <i>🔔</i>
+                <div class="user-avatar"><i>👤</i></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+         <div class="services-page">
+             <a href="SECOND.html" class="back-link"><i>←</i> Back to Home</a>
+             <h1>Our Services</h1>
+
+             <a href="#" class="service-item" target="_blank">
+                 <div class="service-icon"><i>🌐</i></div>
+                 <div>
+                     <h3>Web Development</h3>
+                     <p>Learn HTML, CSS, and web design with free tutorials and reference materials.</p>
+                 </div>
+             </a>
+
+             <a href="#" class="service-item" target="_blank">
+                 <div class="service-icon"><i>⚡</i></div>
+                 <div>
+                     <h3>JavaScript</h3>
+                     <p>Master JavaScript programming with Eloquent JavaScript free online book.</p>
+                 </div>
+             </a>
+
+             <a href="https://opentextbc.ca/graphicdesign/" class="service-item" target="_blank">
+                 <div class="service-icon"><i>🎨</i></div>
+                 <div>
+                     <h3>Graphic Design</h3>
+                     <p>Study graphic design fundamentals, principles, and production techniques.</p>
+                 </div>
+             </a>
+
+             <a href="" class="service-item" target="_blank">
+                 <div class="service-icon"><i>🔢</i></div>
+                 <div>
+                     <h3>Mathematics</h3>
+                     <p>Access comprehensive math courses from basic to advanced levels.</p>
+                 </div>
+             </a>
+
+             <a href="https://gamedevacademy.org/free-ebook-godot-game-development/" class="service-item" target="_blank">
+                 <div class="service-icon"><i>🎮</i></div>
+                 <div>
+                     <h3>Game Development</h3>
+                     <p>Build 2D and 3D games with Godot game engine using free eBook.</p>
+                 </div>
+             </a>
+
+             <a href="https://www.studentsfriend.com/" class="service-item" target="_blank">
+                 <div class="service-icon"><i>📚</i></div>
+                 <div>
+                     <h3>History</h3>
+                     <p>Explore world history with concise study materials and references.</p>
+                 </div>
+             </a>
+         </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 LearnEasy. Made by Gnetwork.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar) sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

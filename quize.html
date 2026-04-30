@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Quizzes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #1a237e;
+    }
+    .quiz-section {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .answers-section textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+        .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #1a237e;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+        .btn:hover {
+        background: #1a237e;;
+        }
+  </style>
+</head>
+<body>
+
+  <!-- JavaScript Quiz -->
+  <div class="quiz-section">
+    <h2>JavaScript Quiz</h2>
+    <form>
+      <p>1. Which keyword declares a block-scoped variable?</p>
+      <label><input type="radio" name="js1"> var</label><br>
+      <label><input type="radio" name="js1"> let</label><br>
+      <label><input type="radio" name="js1"> const</label><br>
+
+      <p>2. What does DOM stand for?</p>
+      <label><input type="radio" name="js2"> Document Object Model</label><br>
+      <label><input type="radio" name="js2"> Data Object Method</label><br>
+      <label><input type="radio" name="js2"> Dynamic Output Module</label><br>
+
+      <p>3. Which method adds an event listener?</p>
+      <label><input type="radio" name="js3"> addEventListener()</label><br>
+      <label><input type="radio" name="js3"> attachEvent()</label><br>
+      <label><input type="radio" name="js3"> onEvent()</label><br>
+
+      <p>4. Which symbol is used for strict equality?</p>
+      <label><input type="radio" name="js4"> ==</label><br>
+      <label><input type="radio" name="js4"> ===</label><br>
+      <label><input type="radio" name="js4"> !=</label><br>
+
+      <p>5. What is the purpose of form validation?</p>
+      <label><input type="radio" name="js5"> Check user input</label><br>
+      <label><input type="radio" name="js5"> Style the form</label><br>
+      <label><input type="radio" name="js5"> Submit data automatically</label><br>
+    </form>
+  </div>
+
+  <!-- Website Development Quiz -->
+  <div class="quiz-section">
+    <h2>Website Development Quiz</h2>
+    <form>
+      <p>1. Which language structures the content of a webpage?</p>
+      <label><input type="radio" name="w1"> HTML</label><br>
+      <label><input type="radio" name="w1"> CSS</label><br>
+      <label><input type="radio" name="w1"> JavaScript</label><br>
+
+      <p>2. What does responsive design mean?</p>
+      <label><input type="radio" name="w2"> Adapts to screen size</label><br>
+      <label><input type="radio" name="w2"> Fast loading</label><br>
+      <label><input type="radio" name="w2"> Colorful design</label><br>
+
+      <p>3. Which is a semantic HTML tag?</p>
+      <label><input type="radio" name="w3"> div</label><br>
+      <label><input type="radio" name="w3"> header</label><br>
+      <label><input type="radio" name="w3"> span</label><br>
+
+      <p>4. Which CSS type is best for large projects?</p>
+      <label><input type="radio" name="w4"> Inline CSS</label><br>
+      <label><input type="radio" name="w4"> External CSS</label><br>
+      <label><input type="radio" name="w4"> Internal CSS</label><br>
+
+      <p>5. What is the purpose of meta tags?</p>
+      <label><input type="radio" name="w5"> SEO and info</label><br>
+      <label><input type="radio" name="w5"> Add images</label><br>
+      <label><input type="radio" name="w5"> Style text</label><br>
+    </form>
+  </div>
+
+  <!-- Graphics Design Quiz -->
+  <div class="quiz-section">
+    <h2>Graphics Design Quiz</h2>
+    <form>
+      <p>1. Which format is scalable without losing quality?</p>
+      <label><input type="radio" name="g1"> Vector</label><br>
+      <label><input type="radio" name="g1"> Raster</label><br>
+      <label><input type="radio" name="g1"> Bitmap</label><br>
+
+      <p>2. What does color theory help with?</p>
+      <label><input type="radio" name="g2"> Choosing harmonious colors</label><br>
+      <label><input type="radio" name="g2"> Making code faster</label><br>
+      <label><input type="radio" name="g2"> Improving SEO</label><br>
+
+      <p>3. Why is contrast important?</p>
+      <label><input type="radio" name="g3"> Clarity and readability</label><br>
+      <label><input type="radio" name="g3"> Add animations</label><br>
+      <label><input type="radio" name="g3"> Increase file size</label><br>
+
+      <p>4. Which focuses on user interaction?</p>
+      <label><input type="radio" name="g4"> UI Design</label><br>
+      <label><input type="radio" name="g4"> UX Design</label><br>
+      <label><input type="radio" name="g4"> Graphic Design</label><br>
+
+      <p>5. What does a grid system help with?</p>
+      <label><input type="radio" name="g5"> Organizing layout</label><br>
+      <label><input type="radio" name="g5"> Adding colors</label><br>
+      <label><input type="radio" name="g5"> Improving SEO</label><br>
+    </form>
+  </div>
+
+  
+  <div class="submit-your-answers">
+    <input type="submit" value="Submit Answers" class="btn">
+  </div>
+  </form>
+  </div>
+
+  <div class="answers-section">
+    <h2>Answers</h2>
+    <p><strong>JavaScript Quiz:</strong> 1. let, 2. Document Object Model, 3. addEventListener(), 4. ===, 5. Check user input</p>
+    <p><strong>Website Development Quiz:</strong> 1. HTML, 2. Adapts to screen size, 3. header, 4. External CSS, 5. SEO and info</p>
+    <p><strong>Graphics Design Quiz:</strong> 1. Vector, 2. Choosing harmonious colors, 3. Clarity and readability, 4. UX Design, 5. Organizing layout</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 LearnEasy. Made by Gnetwork.</p>
+  </footer>
+</body>
+</html>
