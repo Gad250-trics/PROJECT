@@ -17,18 +17,12 @@
       <nav>
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+       
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Search Banner -->
-  <div class="search-banner">
-    <div class="search-bar">
-      <input type="text" id="search" placeholder="Search for courses..." onkeyup="searchItem()">
-      <button>Search</button>
-    </div>
   </div>
 
   <!-- Sidebar -->
@@ -38,7 +32,7 @@
        <a href="Website development NOTE-1 (4).docx"><i>💻</i> Web Development</a>
        <a href="New notes of JS.pdf"><i>⚡</i> JavaScript</a>
        <a href="BASIC GRAPHIC DESIGN summary FINAL (2).docx"><i>🎨</i> Graphic Design</a>
-   w    <a href="#"><i>🔢</i> Mathematics</a>
+      <a href="#"><i>🔢</i> Mathematics</a>
        <a href="SWDVF301 Notes.pptx"><i>🎮</i> Game Development</a>
     </div>
     <div class="sidebar-section">
@@ -63,7 +57,7 @@
      
     </section>
 
-    <!-- Services Section -->
+<!-- Services Section -->
     <section class="services">
       <div class="section-header">
         <h2>Our Services</h2>
@@ -76,7 +70,7 @@
           </div>
           <h3>Web Design</h3>
           <p>We create beautiful and responsive websites.</p>
-          <a href="https://www.w3schools.com">Read More </a>
+          <a href="https://www.w3schools.com/whatis/">Read More </a>
         </div>
         <div class="card">
           <div class="card-image graphic-design">
@@ -84,7 +78,7 @@
           </div>
           <h3>Graphic Design</h3>
           <p>We bring your ideas to life with creativity.</p>
-          <a href="#">Read More </a>
+          <a href="https://www.w3schools.com/whatis/">Read More </a>
         </div>
         <div class="card">
           <div class="card-image programming">
@@ -92,7 +86,7 @@
           </div>
           <h3>Programming</h3>
           <p>Learn programming and build powerful applications.</p>
-          <a href="https://www.w3schools.com">Read More </a>
+          <a href="https://www.w3schools.com/whatis/">Read More </a>
         </div>
         <div class="card">
           <div class="card-image mathematics">
@@ -100,9 +94,12 @@
           </div>
           <h3>Mathematics</h3>
           <p>Solving equations and more mathematics problems.</p>
-          <a href="https://www.w3schools.com">Read More </a>
+          <a href="https://www.w3schools.com/whatis/">Read More </a>
         </div>
       </div>
+      <!--dawnload button-->
+<input type="button" value="Download All" class="dawnload-btn"
+onclick="window.location.href='dawnload.html'">
     </section>
 
       <!-- Testimonials -->
@@ -136,7 +133,7 @@
         </div>
       </div>
 
-      <!-- Quick Quiz Link -->
+<!-- Quick Quiz Link -->
       <div class="quiz-box">
          <div class="box-header">
            <i>❓</i>
@@ -147,14 +144,17 @@
       </div>
     </section>
 
+    <!-- Download Section -->
+   
+
     <!-- Footer -->
 <footer>
       <p>&copy; 2026 LearnEasy. Made by Gnetwork.</p>
       <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
+        <a href="terms.html">Terms of Use</a>
         <a href="login.html">Admin Login</a>
       </div>
+
     </footer>
 
     <script>
@@ -163,6 +163,11 @@
         const mainContent = document.querySelector('.main-content');
         sidebar.classList.toggle('active');
         mainContent.classList.toggle('shifted');
+      }
+
+      function toggleDownload() {
+        const section = document.getElementById('downloadSection');
+        section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
       }
     </script>
   </body>

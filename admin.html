@@ -160,9 +160,19 @@
       let data = JSON.parse(localStorage.getItem("contents")) || [];
       data.push({ type, title, content });
       localStorage.setItem("contents", JSON.stringify(data));
-      display();
+      
       document.getElementById("title").value = "";
       document.getElementById("content").value = "";
+      
+      display();
+      
+      let btn = event.target;
+      btn.textContent = "Added!";
+      btn.style.background = "#28a745";
+      setTimeout(() => {
+        btn.textContent = "Add Content";
+        btn.style.background = "";
+      }, 1500);
     }
 
     function display() {

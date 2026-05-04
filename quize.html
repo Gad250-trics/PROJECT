@@ -111,11 +111,11 @@
       </form>
     </div>
 
-    <div style="text-align: center; margin: 20px 0;">
-      <button class="quiz-btn">Submit Answers</button>
+<div style="text-align: center; margin: 20px 0;">
+      <button class="quiz-btn" onclick="showAnswers()">Submit Answers</button>
     </div>
 
-    <div class="quiz-section">
+    <div class="quiz-section" id="answers-section" style="display:none;">
       <h2>Answers</h2>
       <p><strong>JavaScript Quiz:</strong> 1. let, 2. Document Object Model, 3. addEventListener(), 4. ===, 5. Check user input</p>
       <p><strong>Website Development Quiz:</strong> 1. HTML, 2. Adapts to screen size, 3. header, 4. External CSS, 5. SEO and info</p>
@@ -125,6 +125,18 @@
 
   <footer>
     <p>&copy; 2026 LearnEasy. Made by Gnetwork.</p>
+    <div class="footer-links">
+      <a href="terms.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
   </footer>
+
+  <script>
+    function showAnswers() {
+      document.getElementById('answers-section').style.display = 'block';
+      document.querySelector('.quiz-btn').textContent = 'Answers Shown';
+      document.querySelector('.quiz-btn').style.background = '#28a745';
+    }
+  </script>
 </body>
 </html>
