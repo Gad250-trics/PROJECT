@@ -9,27 +9,27 @@
 </head>
 <body>
   <!-- Header -->
-  <header>
+<header>
     <div class="header-left">
-       <span class="menu-icon" onclick="toggleSidebar()">&#9776;</span>
-
+      <span class="menu-icon" onclick="toggleSidebar()">☰</span>
     </div>
-
-    <div class="search-bar">
-      <input type="text" placeholder="Search for courses...">
-      <button>Search</button>
-    </div>
-
     <div class="header-right">
       <nav>
-        <a href="SECOND.html" class="active">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </nav>
-      
     </div>
   </header>
+
+  <!-- Search Banner -->
+  <div class="search-banner">
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search for courses..." onkeyup="searchItem()">
+      <button>Search</button>
+    </div>
+  </div>
 
   <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
@@ -67,7 +67,7 @@
     <section class="services">
       <div class="section-header">
         <h2>Our Services</h2>
-        <a href="#" class="view-all">View All</a>
+        <a href="services.html" class="view-all">View All</a>
       </div>
       <div class="cards-grid">
         <div class="card">
@@ -101,7 +101,6 @@
           <h3>Mathematics</h3>
           <p>Solving equations and more mathematics problems.</p>
           <a href="https://www.w3schools.com">Read More </a>
-
         </div>
       </div>
     </section>
@@ -164,26 +163,22 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-      
+<footer>
       <p>&copy; 2026 LearnEasy. Made by Gnetwork.</p>
       <div class="footer-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Use</a>
+        <a href="login.html">Admin Login</a>
       </div>
     </footer>
-        
-    
-    
-  
 
-  <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      const mainContent = document.querySelector('.main-content');
-      sidebar.classList.toggle('active');
-      mainContent.classList.toggle('shifted');
-    }
-  </script>
-</body>
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.querySelector('.main-content');
+        sidebar.classList.toggle('active');
+        mainContent.classList.toggle('shifted');
+      }
+    </script>
+  </body>
 </html>
