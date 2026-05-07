@@ -4,26 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LearnEasy Platform</title>
-
   <link rel="stylesheet" href="styles.css">
+  <link rel="prefetch" href="quize.html">
 </head>
 <body>
   <!-- Header -->
 <header>
     <div class="header-left">
       <span class="menu-icon" onclick="toggleSidebar()">☰</span>
+      <img src="CMS.svg" alt="CMS Logo" class="site-logo">
     </div>
     <div class="header-right">
       <nav>
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
-       
         <a href="contact.html">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="toggleDropdown()">Take Quiz</button>
+          <div class="dropdown-content">
+            <a href="quize.html">JavaScript Quiz</a>
+            <a href="web.html">web development</a>
+            <a href="graphic.html">Graphic Design Quiz</a>
+            <a href="game.html">game development Quiz</a>
+            <a href="ccml.html">computer literacy</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
-
-  </div>
 
   <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
@@ -34,10 +42,8 @@
        <a href="BASIC GRAPHIC DESIGN summary FINAL (2).docx"><i>🎨</i> Graphic Design</a>
       <a href="#"><i>🔢</i> Mathematics</a>
        <a href="SWDVF301 Notes.pptx"><i>🎮</i> Game Development</a>
-    </div>
-    <div class="sidebar-section">
-      <h3>Exercises</h3>
-       <a href="exericse1.html"><i>📝</i> History S1 Exercises</a>
+   
+       <a href="CCMCL301_Computer literacy (1).pdf"><i>📝</i> computer literacy</a>
     </div>
   </div>
 
@@ -49,9 +55,9 @@
         <h2>Welcome to</h2>
         <h1>Course Management System</h1>
         <p>Your all-in-one place to learn, practice and achieve your goals. Explore courses, take quizzes and grow your skills.</p>
-        <div class="hero-buttons">
-          <a href="#" class="btn-primary">Explore Courses</a>
-          <a href="quize.html" class="btn-secondary">Take Quiz</a>
+        
+  
+      
         </div>
       </div>
      
@@ -61,7 +67,6 @@
     <section class="services">
       <div class="section-header">
         <h2>Our Services</h2>
-        <a href="services.html" class="view-all">View All</a>
       </div>
       <div class="cards-grid">
         <div class="card">
@@ -119,7 +124,7 @@ onclick="window.location.href='dawnload.html'">
             <div class="testimonial-avatar"><i>👤</i></div>
             <div class="testimonial-content">
               <p>"The quizzes are a great way to test my knowledge."</p>
-              <span class="name">— Bob, Student</span>
+              <span class="name">— claude, Student</span>
               
             </div>
         </div>
@@ -133,19 +138,57 @@ onclick="window.location.href='dawnload.html'">
         </div>
       </div>
 
-<!-- Quick Quiz Link -->
-      <div class="quiz-box">
-         <div class="box-header">
-           <i>❓</i>
-           <h3>Take a Quiz</h3>
-         </div>
-        <p>Test your knowledge with our interactive quizzes.</p>
-         <a href="quize.html" class="view-more-quizzes">Start Quiz <i>→</i></a>
-      </div>
-    </section>
 
-    <!-- Download Section -->
-   
+     
+<div class="container">
+
+  <h1>announce</h1>
+
+  <div id="output"></div>
+
+</div>
+
+<script>
+
+function toggleDropdown() {
+  var dropdown = document.querySelector('.dropdown-content');
+  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+}
+
+function loadContents(){
+
+  let output = document.getElementById("output");
+
+  let data = JSON.parse(localStorage.getItem("contents")) || [];
+
+  output.innerHTML = "";
+
+  data.reverse().forEach(item => {
+
+    output.innerHTML += `
+      <div class="card">
+
+        <div class="type">${item.type}</div>
+
+        <h2>${item.title}</h2>
+
+        <a href="${item.content}" target="_blank">
+          Open Content
+        </a>
+
+      </div>
+    `;
+
+  });
+
+}
+
+loadContents();
+
+window.addEventListener("storage", loadContents);
+
+</script>
+
 
     <!-- Footer -->
 <footer>

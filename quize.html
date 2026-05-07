@@ -1,142 +1,188 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Course Quizzes</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Quiz App</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial;
+    }
+
+    body{
+      background:#f4f4f4;
+      padding:30px;
+    }
+
+    .container{
+      max-width:800px;
+      margin:auto;
+      background:white;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1{
+      margin-bottom:20px;
+      text-align:center;
+      color:darkblue;
+    }
+
+    .question-box{
+      margin-bottom:25px;
+      padding:15px;
+      border:1px solid #ddd;
+      border-radius:8px;
+    }
+
+    .question{
+      font-weight:bold;
+      margin-bottom:10px;
+    }
+
+    label{
+      display:block;
+      margin:8px 0;
+      cursor:pointer;
+    }
+
+    button{
+      padding:12px 20px;
+      border:none;
+      background:darkblue;
+      color:white;
+      font-size:16px;
+      border-radius:5px;
+      cursor:pointer;
+      width:100%;
+    }
+
+    button:hover{
+      background:blue;
+    }
+
+    #result{
+      margin-top:25px;
+      text-align:center;
+      font-size:22px;
+      font-weight:bold;
+      color:green;
+    }
+
+  </style>
 </head>
 <body>
-  <header style="position: relative;">
-    <div class="header-right">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <div style="margin-top: 80px; padding: 20px;">
-    <!-- JavaScript Quiz -->
-    <div class="quiz-section">
-      <h2>JavaScript Quiz</h2>
-      <form>
-        <p>1. Which keyword declares a block-scoped variable?</p>
-        <label><input type="radio" name="js1"> var</label><br>
-        <label><input type="radio" name="js1"> let</label><br>
-        <label><input type="radio" name="js1"> const</label><br>
+<div class="container">
 
-        <p>2. What does DOM stand for?</p>
-        <label><input type="radio" name="js2"> Document Object Model</label><br>
-        <label><input type="radio" name="js2"> Data Object Method</label><br>
-        <label><input type="radio" name="js2"> Dynamic Output Module</label><br>
+  <h1>JavaScript Quiz</h1>
 
-        <p>3. Which method adds an event listener?</p>
-        <label><input type="radio" name="js3"> addEventListener()</label><br>
-        <label><input type="radio" name="js3"> attachEvent()</label><br>
-        <label><input type="radio" name="js3"> onEvent()</label><br>
+  <form>
 
-        <p>4. Which symbol is used for strict equality?</p>
-        <label><input type="radio" name="js4"> ==</label><br>
-        <label><input type="radio" name="js4"> ===</label><br>
-        <label><input type="radio" name="js4"> !=</label><br>
+  <div class="question-box">
+    <div class="question">1. What does querySelector() return?</div>
 
-        <p>5. What is the purpose of form validation?</p>
-        <label><input type="radio" name="js5"> Check user input</label><br>
-        <label><input type="radio" name="js5"> Style the form</label><br>
-        <label><input type="radio" name="js5"> Submit data automatically</label><br>
-      </form>
-    </div>
-
-    <!-- Website Development Quiz -->
-    <div class="quiz-section">
-      <h2>Website Development Quiz</h2>
-      <form>
-        <p>1. Which language structures the content of a webpage?</p>
-        <label><input type="radio" name="w1"> HTML</label><br>
-        <label><input type="radio" name="w1"> CSS</label><br>
-        <label><input type="radio" name="w1"> JavaScript</label><br>
-
-        <p>2. What does responsive design mean?</p>
-        <label><input type="radio" name="w2"> Adapts to screen size</label><br>
-        <label><input type="radio" name="w2"> Fast loading</label><br>
-        <label><input type="radio" name="w2"> Colorful design</label><br>
-
-        <p>3. Which is a semantic HTML tag?</p>
-        <label><input type="radio" name="w3"> div</label><br>
-        <label><input type="radio" name="w3"> header</label><br>
-        <label><input type="radio" name="w3"> span</label><br>
-
-        <p>4. Which CSS type is best for large projects?</p>
-        <label><input type="radio" name="w4"> Inline CSS</label><br>
-        <label><input type="radio" name="w4"> External CSS</label><br>
-        <label><input type="radio" name="w4"> Internal CSS</label><br>
-
-        <p>5. What is the purpose of meta tags?</p>
-        <label><input type="radio" name="w5"> SEO and info</label><br>
-        <label><input type="radio" name="w5"> Add images</label><br>
-        <label><input type="radio" name="w5"> Style text</label><br>
-      </form>
-    </div>
-
-    <!-- Graphics Design Quiz -->
-    <div class="quiz-section">
-      <h2>Graphics Design Quiz</h2>
-      <form>
-        <p>1. Which format is scalable without losing quality?</p>
-        <label><input type="radio" name="g1"> Vector</label><br>
-        <label><input type="radio" name="g1"> Raster</label><br>
-        <label><input type="radio" name="g1"> Bitmap</label><br>
-
-        <p>2. What does color theory help with?</p>
-        <label><input type="radio" name="g2"> Choosing harmonious colors</label><br>
-        <label><input type="radio" name="g2"> Making code faster</label><br>
-        <label><input type="radio" name="g2"> Improving SEO</label><br>
-
-        <p>3. Why is contrast important?</p>
-        <label><input type="radio" name="g3"> Clarity and readability</label><br>
-        <label><input type="radio" name="g3"> Add animations</label><br>
-        <label><input type="radio" name="g3"> Increase file size</label><br>
-
-        <p>4. Which focuses on user interaction?</p>
-        <label><input type="radio" name="g4"> UI Design</label><br>
-        <label><input type="radio" name="g4"> UX Design</label><br>
-        <label><input type="radio" name="g4"> Graphic Design</label><br>
-
-        <p>5. What does a grid system help with?</p>
-        <label><input type="radio" name="g5"> Organizing layout</label><br>
-        <label><input type="radio" name="g5"> Adding colors</label><br>
-        <label><input type="radio" name="g5"> Improving SEO</label><br>
-      </form>
-    </div>
-
-<div style="text-align: center; margin: 20px 0;">
-      <button class="quiz-btn" onclick="showAnswers()">Submit Answers</button>
-    </div>
-
-    <div class="quiz-section" id="answers-section" style="display:none;">
-      <h2>Answers</h2>
-      <p><strong>JavaScript Quiz:</strong> 1. let, 2. Document Object Model, 3. addEventListener(), 4. ===, 5. Check user input</p>
-      <p><strong>Website Development Quiz:</strong> 1. HTML, 2. Adapts to screen size, 3. header, 4. External CSS, 5. SEO and info</p>
-      <p><strong>Graphics Design Quiz:</strong> 1. Vector, 2. Choosing harmonious colors, 3. Clarity and readability, 4. UX Design, 5. Organizing layout</p>
-    </div>
+    <label><input type="radio" name="q1" value="a"> All matching elements</label>
+    <label><input type="radio" name="q1" value="b"> The first matching element</label>
+    <label><input type="radio" name="q1" value="c"> Only IDs</label>
+    <label><input type="radio" name="q1" value="d"> Only classes</label>
   </div>
 
-  <footer>
-    <p>&copy; 2026 LearnEasy. Made by Gnetwork.</p>
-    <div class="footer-links">
-      <a href="terms.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Use</a>
-    </div>
-  </footer>
+  <div class="question-box">
+    <div class="question">2. Which symbol is used to select an ID?</div>
 
-  <script>
-    function showAnswers() {
-      document.getElementById('answers-section').style.display = 'block';
-      document.querySelector('.quiz-btn').textContent = 'Answers Shown';
-      document.querySelector('.quiz-btn').style.background = '#28a745';
-    }
-  </script>
+    <label><input type="radio" name="q2" value="a"> .</label>
+    <label><input type="radio" name="q2" value="b"> *</label>
+    <label><input type="radio" name="q2" value="c"> #</label>
+    <label><input type="radio" name="q2" value="d"> @</label>
+  </div>
+
+  <div class="question-box">
+    <div class="question">3. Which method returns all matching elements?</div>
+
+    <label><input type="radio" name="q3" value="a"> getElementById()</label>
+    <label><input type="radio" name="q3" value="b"> querySelector()</label>
+    <label><input type="radio" name="q3" value="c"> querySelectorAll()</label>
+    <label><input type="radio" name="q3" value="d"> innerHTML()</label>
+  </div>
+
+  <div class="question-box">
+    <div class="question">4. What does localStorage store?</div>
+
+    <label><input type="radio" name="q4" value="a"> Images only</label>
+    <label><input type="radio" name="q4" value="b"> Temporary variables</label>
+    <label><input type="radio" name="q4" value="c"> Key-value pairs</label>
+    <label><input type="radio" name="q4" value="d"> HTML tags</label>
+  </div>
+
+  <div class="question-box">
+    <div class="question">5. Which method stores data in localStorage?</div>
+
+    <label><input type="radio" name="q5" value="a"> getItem()</label>
+    <label><input type="radio" name="q5" value="b"> setItem()</label>
+    <label><input type="radio" name="q5" value="c"> removeItem()</label>
+    <label><input type="radio" name="q5" value="d"> clear()</label>
+  </div>
+
+</form>
+
+  <button onclick="submitQuiz()">
+    Submit Answers
+  </button>
+
+  <div id="result"></div>
+
+</div>
+
+<script>
+
+function submitQuiz(){
+
+  let score = 0;
+
+  // Question 1
+  let q1 = document.querySelector('input[name="q1"]:checked');
+  if(q1 && q1.value === "b"){
+    score++;
+  }
+
+  // Question 2
+  let q2 = document.querySelector('input[name="q2"]:checked');
+  if(q2 && q2.value === "c"){
+    score++;
+  }
+
+  // Question 3
+  let q3 = document.querySelector('input[name="q3"]:checked');
+  if(q3 && q3.value === "c"){
+    score++;
+  }
+
+  // Question 4
+  let q4 = document.querySelector('input[name="q4"]:checked');
+  if(q4 && q4.value === "c"){
+    score++;
+  }
+
+  // Question 5
+  let q5 = document.querySelector('input[name="q5"]:checked');
+  if(q5 && q5.value === "b"){
+    score++;
+  }
+
+  document.getElementById("result").innerHTML =
+    "You scored " + score + " out of 5";
+
+}
+
+</script>
+
 </body>
 </html>
