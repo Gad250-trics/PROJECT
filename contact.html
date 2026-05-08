@@ -45,5 +45,16 @@
       <button type="submit">Send</button>
     </form>
   </div>
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById('sidebar');
+      if (sidebar) sidebar.classList.toggle('active');
+    }
+
+    function toggleDropdown() {
+      var dropdown = document.querySelector('.dropdown-content');
+      if (dropdown) dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>

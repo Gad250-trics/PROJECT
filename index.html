@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LearnEasy Platform</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="prefetch" href="quize.html">
@@ -149,6 +149,11 @@ onclick="window.location.href='dawnload.html'">
 </div>
 
 <script>
+
+function toggleSidebar() {
+  var sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('active');
+}
 
 function toggleDropdown() {
   var dropdown = document.querySelector('.dropdown-content');
